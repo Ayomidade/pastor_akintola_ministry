@@ -31,14 +31,6 @@ const limiter = rateLimit({
   legacyHeaders: false,
 });
 
-// Stricter limiter for auth routes
-const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000,
-  max: 20,
-  standardHeaders: true,
-  legacyHeaders: false,
-});
-
 app.use(
   cors({
     origin: process.env.CLIENT_URL,
@@ -74,7 +66,7 @@ app.use(
 app.use("/api/auth/setup-status", setupRouter)
 
 // Routes
-app.use("/api/auth", authLimiter, authRoutes);
+app.use("/api/auth", authRoutes);
 app.use("/api/visitors", visitorRoutes);
 app.use("/api/posts", postRoutes);
 app.use("/api/sermons", sermonRoutes);

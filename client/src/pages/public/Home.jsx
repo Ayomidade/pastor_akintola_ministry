@@ -1157,7 +1157,7 @@ export default function Home() {
         @media (max-width: 768px) {
           .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 20px; }
           .about-grid { grid-template-columns: 1fr; gap: 32px; }
-          .about-grid > div:last-child { display: none; }
+          // .about-grid > div:last-child { display: none; }
           .section-header { flex-direction: column; align-items: flex-start; }
           .socials-grid { grid-template-columns: 1fr 1fr; }
           .socials-grid > a:first-child { grid-column: span 2; }

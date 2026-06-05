@@ -75,7 +75,12 @@ export async function login(req, res) {
 
     return res.status(200).json({
       message: "Login successful.",
-      admin: { name: admin.name, email: admin.email },
+      admin: {
+        name: admin.name,
+        email: admin.email,
+        test: req.session,
+        session: req.session.adminId,
+      },
     });
   } catch (err) {
     console.error(err);
@@ -161,11 +166,9 @@ export async function requestPasswordResetOTP(req, res) {
     const admin = await findAdminByEmail(email);
 
     if (!admin) {
-      return res
-        .status(200)
-        .json({
-          message: "If this email is registered, an OTP has been sent.",
-        });
+      return res.status(200).json({
+        message: "If this email is registered, an OTP has been sent.",
+      });
     }
 
     const otp = crypto.randomInt(100000, 999999).toString();

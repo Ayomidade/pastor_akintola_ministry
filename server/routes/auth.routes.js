@@ -13,7 +13,7 @@ import { isAdmin } from "../middlewares/auth.middleware.js";
 import { rateLimit } from "express-rate-limit";
 
 const router = Router();
-export const  setupRouter=Router()
+export const setupRouter = Router();
 
 setupRouter.get("/", checkSetupStatus);
 
@@ -25,10 +25,18 @@ const otpLimiter = rateLimit({
   },
 });
 
+// Stricter limiter for auth routes
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 20,
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+
 // Public
 // router.get("/setup-status", checkSetupStatus);
 router.post("/setup", setupAdmin);
-router.post("/login", login);
+router.post("/login", authLimiter, login);
 router.post("/forgot-password", otpLimiter, requestPasswordResetOTP);
 router.post("/reset-password", resetPasswordWithOTP);
 
