@@ -82,7 +82,9 @@ const AppRoutes = () => {
       <Route path="/ebooks" element={<Ebooks />} />
       <Route path="/events" element={<Events />} />
       <Route path="/events/:slug" element={<Events />} />
+      {/* <Route path="/gallery" element={<Media />} /> */}
       <Route path="/gallery" element={<Media />} />
+      <Route path="/gallery/:slug" element={<Media />} />
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<About />} />
       <Route path="/donate" element={<Donate />} />
@@ -125,7 +127,9 @@ const AppRoutes = () => {
         <Route path="events" element={<EventList />} />
         <Route path="events/create" element={<CreateEvent />} />
         <Route path="events/edit/:id" element={<EditEvent />} />
+        {/* <Route path="gallery" element={<MediaLibrary />} /> */}
         <Route path="gallery" element={<MediaLibrary />} />
+        <Route path="gallery/:collectionId" element={<MediaLibrary />} />
         <Route path="comments" element={<Comments />} />
         <Route path="contacts" element={<Contacts />} />
         <Route path="newsletter" element={<Newsletter />} />

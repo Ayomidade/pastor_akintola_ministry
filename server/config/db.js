@@ -51,6 +51,7 @@ export const newsletter = () => getCollection("newsletter");
 export const contacts = () => getCollection("contacts");
 export const events = () => getCollection("events");
 export const media = () => getCollection("media");
+export const mediaCollections = () => getCollection("mediaCollections");
 
 // Chat
 export const chatSessions = () => getCollection("chatSessions");

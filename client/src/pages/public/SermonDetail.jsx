@@ -6,6 +6,7 @@ import AudioPlayer from "../../components/AudioPlayer.jsx";
 import { format } from "date-fns";
 import { ArrowLeft, Download } from "lucide-react";
 import toast from "react-hot-toast";
+import { deriveFilename, downloadFile } from "../../utils/download.js";
 
 export default function SermonDetail() {
   const { slug } = useParams();
@@ -25,11 +26,9 @@ export default function SermonDetail() {
   const handleDownload = async () => {
     try {
       await sermonService.incrementDownload(sermon._id);
-      const a = document.createElement("a");
-      a.href = sermon.audio.url;
-      a.download = `${sermon.slug}.mp3`;
-      a.target = "_blank";
-      a.click();
+      const filename=deriveFilename(sermon.title, "mp3")
+      await downloadFile(sermon.audio.url, filename)
+      toast.success("Download started.")
     } catch {
       toast.error("Download failed.");
     }

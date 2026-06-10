@@ -20,9 +20,11 @@ export default function Ebooks() {
   const handleDownload = async (ebook) => {
     try {
       await ebookService.incrementDownload(ebook._id);
-      window.open(ebook.file.url, "_blank");
+      const filename = deriveFilename(ebook.title, "pdf");
+      await downloadFile(ebook.file.url, filename);
+      toast.success("Download started.");
     } catch {
-      toast.error("Download failed.");
+      toast.error("Download failed. Please try again.");
     }
   };
 
