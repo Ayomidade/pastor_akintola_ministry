@@ -151,7 +151,7 @@ export default function UploadEbook() {
               <label
                 style={{
                   display: "block",
-                  border: `2px dashed ${pdf ? "var(--gold)" : "var(--border)"}`,
+                  border: `2px dashed ${pdf ? "var(--accent)" : "var(--border)"}`,
                   borderRadius: "var(--radius-lg)",
                   cursor: "pointer",
                   padding: 32,
@@ -162,14 +162,14 @@ export default function UploadEbook() {
                   size={32}
                   style={{
                     margin: "0 auto 12px",
-                    color: pdf ? "var(--gold)" : "var(--border)",
+                    color: pdf ? "var(--accent)" : "var(--border)",
                   }}
                 />
                 <p
                   style={{
                     fontSize: 14,
                     fontWeight: 600,
-                    color: pdf ? "var(--navy)" : "var(--text-muted)",
+                    color: pdf ? "var(--primary)" : "var(--text-muted)",
                   }}
                 >
                   {pdf ? pdf.name : "Click to upload PDF"}

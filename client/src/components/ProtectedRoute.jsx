@@ -12,7 +12,7 @@ export default function ProtectedRoute({ children }) {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "var(--navy)",
+          background: "var(--primary)",
         }}
       >
         <div style={{ textAlign: "center" }}>
@@ -21,7 +21,7 @@ export default function ProtectedRoute({ children }) {
               width: 40,
               height: 40,
               border: "3px solid rgba(201,168,76,0.3)",
-              borderTopColor: "var(--gold)",
+              borderTopColor: "var(--accent)",
               borderRadius: "50%",
               animation: "spin 0.8s linear infinite",
               margin: "0 auto 16px",
@@ -29,7 +29,7 @@ export default function ProtectedRoute({ children }) {
           />
           <p
             style={{
-              color: "rgba(248,245,239,0.5)",
+              color: "rgba(250,250,250,0.5)",
               fontSize: 13,
               letterSpacing: 1,
             }}

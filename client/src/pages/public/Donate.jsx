@@ -15,22 +15,23 @@ import toast from "react-hot-toast";
 // ─── UPDATE THESE with real details ──────────────────────────────
 const BANK_ACCOUNTS = [
   {
-    bank: "First Bank of Nigeria",
-    accountName: "Pastor Daniel Akintola Ministries",
-    accountNumber: "3012345678",
-    logo: "FB",
+    bank: "Ecobank",
+    accountName: "Daniel Oluwagbemileke Akintola",
+    accountNumber: "3521050519",
+    logo: "EB",
   },
   {
     bank: "Zenith Bank",
-    accountName: "Pastor Daniel Akintola Ministries",
-    accountNumber: "2098765432",
+    accountName: "Daniel Oluwagbemileke Akintola",
+    accountNumber: "1004566637",
     logo: "ZB",
   },
   {
-    bank: "GTBank",
-    accountName: "Pastor Daniel Akintola Ministries",
-    accountNumber: "0123456789",
-    logo: "GT",
+    bank: "Zenith Bank (Dollar Account)",
+    accountName: "Daniel Oluwagbemileke Akintola",
+    accountNumber: "5074514422",
+    logo: "ZB",
+    swiftCode: "ZEIBNGLA",
   },
 ];
 
@@ -63,7 +64,7 @@ export default function Donate() {
       {/* Scripture */}
       <section
         style={{
-          background: "var(--gold)",
+          background: "var(--accent)",
           padding: "32px 0",
           textAlign: "center",
         }}
@@ -74,7 +75,7 @@ export default function Donate() {
               fontFamily: "var(--font-display)",
               fontStyle: "italic",
               fontSize: "clamp(1rem, 2.5vw, 1.3rem)",
-              color: "var(--navy)",
+              color: "var(--primary)",
               lineHeight: 1.7,
             }}
           >
@@ -88,7 +89,7 @@ export default function Donate() {
               fontWeight: 700,
               letterSpacing: 2,
               textTransform: "uppercase",
-              color: "rgba(13,27,42,0.6)",
+              color: "rgba(33,33,33,0.6)",
             }}
           >
             2 Corinthians 9:7
@@ -116,8 +117,8 @@ export default function Donate() {
                     flex: 1,
                     padding: "13px 0",
                     border: "none",
-                    background: "var(--gold)",
-                    color: "var(--navy)",
+                    background: "var(--accent)",
+                    color: "var(--primary)",
                     fontWeight: 700,
                     fontSize: 12,
                     letterSpacing: 1,
@@ -172,13 +173,13 @@ export default function Donate() {
                           width: 42,
                           height: 42,
                           borderRadius: "var(--radius)",
-                          background: "var(--navy)",
+                          background: "var(--primary)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
                           fontSize: 11,
                           fontWeight: 700,
-                          color: "var(--gold)",
+                          color: "var(--accent)",
                           flexShrink: 0,
                         }}
                       >
@@ -228,7 +229,7 @@ export default function Donate() {
                             fontSize: 20,
                             fontWeight: 700,
                             letterSpacing: 3,
-                            color: "var(--navy)",
+                            color: "var(--primary)",
                           }}
                         >
                           {acc.accountNumber}
@@ -241,7 +242,7 @@ export default function Donate() {
                         style={{
                           background:
                             copied === acc.bank
-                              ? "var(--gold)"
+                              ? "var(--accent)"
                               : "var(--white)",
                           border: "1px solid var(--border)",
                           borderRadius: "var(--radius)",
@@ -254,7 +255,7 @@ export default function Donate() {
                           fontWeight: 700,
                           color:
                             copied === acc.bank
-                              ? "var(--navy)"
+                              ? "var(--primary)"
                               : "var(--text-secondary)",
                           transition: "all 0.2s",
                         }}
@@ -267,6 +268,76 @@ export default function Donate() {
                         {copied === acc.bank ? "Copied!" : "Copy"}
                       </button>
                     </div>
+
+                    {acc.swiftCode && (
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "space-between",
+                          background: "var(--cream)",
+                          borderRadius: "var(--radius)",
+                          padding: "12px 16px",
+                        }}
+                      >
+                        <div>
+                          <p
+                            style={{
+                              fontSize: 10,
+                              letterSpacing: 1.5,
+                              textTransform: "uppercase",
+                              color: "var(--text-muted)",
+                              marginBottom: 4,
+                            }}
+                          >
+                            Swift Code
+                          </p>
+                          <p
+                            style={{
+                              fontFamily: "monospace",
+                              fontSize: 20,
+                              fontWeight: 700,
+                              letterSpacing: 3,
+                              color: "var(--primary)",
+                            }}
+                          >
+                            {acc.swiftCode}
+                          </p>
+                        </div>
+                        <button
+                          onClick={() =>
+                            copyToClipboard(acc.swiftCode,"Swift Code")
+                          }
+                          style={{
+                            background:
+                              copied === acc.swiftCode
+                                ? "var(--accent)"
+                                : "var(--white)",
+                            border: "1px solid var(--border)",
+                            borderRadius: "var(--radius)",
+                            padding: "8px 12px",
+                            cursor: "pointer",
+                            display: "flex",
+                            alignItems: "center",
+                            gap: 6,
+                            fontSize: 12,
+                            fontWeight: 700,
+                            color:
+                              copied === acc.swiftCode
+                                ? "var(--primary)"
+                                : "var(--text-secondary)",
+                            transition: "all 0.2s",
+                          }}
+                        >
+                          {copied === acc.swiftCode ? (
+                            <Check size={14} />
+                          ) : (
+                            <Copy size={14} />
+                          )}
+                          {copied === acc.swiftCode ? "Copied!" : "Copy"}
+                        </button>
+                      </div>
+                    )}
                   </div>
                 ))}
 
@@ -281,7 +352,7 @@ export default function Donate() {
                   <p
                     style={{
                       fontSize: 13,
-                      color: "var(--navy)",
+                      color: "var(--primary)",
                       lineHeight: 1.7,
                     }}
                   >
@@ -289,7 +360,7 @@ export default function Donate() {
                     name, amount, and bank to{" "}
                     <a
                       href="mailto:pastordanielakintola@gmail.com"
-                      style={{ color: "var(--gold)", fontWeight: 700 }}
+                      style={{ color: "var(--accent)", fontWeight: 700 }}
                     >
                       pastordanielakintola@gmail.com
                     </a>{" "}
@@ -303,7 +374,7 @@ export default function Donate() {
             <div>
               <div
                 style={{
-                  background: "var(--navy)",
+                  background: "var(--primary)",
                   borderRadius: "var(--radius-lg)",
                   padding: "32px 28px",
                   marginBottom: 20,
@@ -311,7 +382,7 @@ export default function Donate() {
               >
                 <h3
                   style={{
-                    color: "var(--gold)",
+                    color: "var(--accent)",
                     fontSize: 18,
                     marginBottom: 20,
                   }}
@@ -362,7 +433,7 @@ export default function Donate() {
                         </p>
                         <p
                           style={{
-                            color: "rgba(248,245,239,0.55)",
+                            color: "rgba(250,250,250,0.55)",
                             fontSize: 13,
                             lineHeight: 1.7,
                           }}
@@ -394,7 +465,7 @@ export default function Donate() {
                     gap: 8,
                   }}
                 >
-                  <Heart size={16} color="var(--gold)" /> Tithes & Offerings
+                  <Heart size={16} color="var(--accent)" /> Tithes & Offerings
                 </h3>
                 <p
                   style={{
@@ -410,7 +481,7 @@ export default function Donate() {
                     style={{
                       display: "block",
                       marginTop: 10,
-                      color: "var(--gold)",
+                      color: "var(--accent)",
                     }}
                   >
                     "Bring the whole tithe into the storehouse..." — Malachi

@@ -101,7 +101,7 @@ export default function AdminLogin() {
     <div
       style={{
         minHeight: "100vh",
-        background: "var(--navy)",
+        background: "var(--primary)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -124,7 +124,7 @@ export default function AdminLogin() {
               fontFamily: "var(--font-display)",
               fontSize: 22,
               fontWeight: 700,
-              color: "var(--gold)",
+              color: "var(--accent)",
               marginBottom: 4,
             }}
           >
@@ -213,7 +213,7 @@ export default function AdminLogin() {
                 width: "100%",
                 background: "none",
                 border: "none",
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontSize: 13,
                 marginTop: 16,
                 cursor: "pointer",

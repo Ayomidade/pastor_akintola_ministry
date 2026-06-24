@@ -115,12 +115,12 @@ export default function ChatWindow() {
               width: 40,
               height: 40,
               borderRadius: "50%",
-              background: "var(--gold)",
+              background: "var(--accent)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontWeight: 700,
-              color: "var(--navy)",
+              color: "var(--primary)",
               fontSize: 15,
             }}
           >
@@ -191,7 +191,7 @@ export default function ChatWindow() {
                 maxWidth: "65%",
                 padding: "12px 16px",
                 background:
-                  msg.sender === "admin" ? "var(--navy)" : "var(--white)",
+                  msg.sender === "admin" ? "var(--primary)" : "var(--white)",
                 color:
                   msg.sender === "admin"
                     ? "var(--cream)"
@@ -235,7 +235,7 @@ export default function ChatWindow() {
                       width: 6,
                       height: 6,
                       borderRadius: "50%",
-                      background: "var(--gold)",
+                      background: "var(--accent)",
                       animation: `bounce 1s infinite ${i * 0.2}s`,
                     }}
                   />

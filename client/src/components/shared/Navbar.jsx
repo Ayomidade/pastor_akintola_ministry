@@ -37,7 +37,9 @@ export default function Navbar() {
         left: 0,
         right: 0,
         zIndex: 1000,
-        background: scrolled ? "rgba(13, 27, 42, 0.55)" : "rgba(13, 27, 42, 0.97)",
+        background: scrolled
+          ? "rgba(13, 27, 42, 0.55)"
+          : "rgba(13, 27, 42, 0.97)",
         backdropFilter: scrolled ? "blur(5px)" : "none",
         borderBottom: scrolled ? "1px solid rgba(201,168,76,0.2)" : "none",
         transition: "all 0.3s ease",
@@ -67,7 +69,7 @@ export default function Navbar() {
               fontFamily: "var(--font-display)",
               fontSize: 20,
               fontWeight: 700,
-              color: "var(--gold)",
+              color: "var(--accent)",
               lineHeight: 1,
             }}
           >
@@ -78,7 +80,7 @@ export default function Navbar() {
               fontSize: 10,
               letterSpacing: 3,
               textTransform: "uppercase",
-              color: "rgba(248,245,239,0.6)",
+              color: "rgba(250,250,250,0.6)",
               marginTop: 2,
             }}
           >
@@ -97,7 +99,7 @@ export default function Navbar() {
               to={l.to}
               end={l.to === "/"}
               style={({ isActive }) => ({
-                color: isActive ? "var(--gold)" : "rgba(248,245,239,0.85)",
+                color: isActive ? "var(--accent)" : "rgba(250,250,250,0.85)",
                 fontSize: 12,
                 fontWeight: 700,
                 letterSpacing: "1.5px",
@@ -105,7 +107,7 @@ export default function Navbar() {
                 textDecoration: "none",
                 transition: "color 0.2s",
                 borderBottom: isActive
-                  ? "2px solid var(--gold)"
+                  ? "2px solid var(--accent)"
                   : "2px solid transparent",
                 paddingBottom: 2,
               })}
@@ -137,7 +139,7 @@ export default function Navbar() {
       {open && (
         <div
           style={{
-            background: "var(--navy)",
+            background: "var(--primary)",
             padding: "16px 24px 24px",
             display: "flex",
             flexDirection: "column",
@@ -151,7 +153,7 @@ export default function Navbar() {
               to={l.to}
               end={l.to === "/"}
               style={({ isActive }) => ({
-                color: isActive ? "var(--gold)" : "rgba(248,245,239,0.85)",
+                color: isActive ? "var(--accent)" : "rgba(250,250,250,0.85)",
                 fontSize: 13,
                 fontWeight: 700,
                 letterSpacing: "1.5px",

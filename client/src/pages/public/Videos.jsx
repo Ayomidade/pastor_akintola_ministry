@@ -246,7 +246,7 @@ export default function Videos() {
                       <div
                         style={{
                           height: 190,
-                          background: "var(--navy)",
+                          background: "var(--primary)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -381,7 +381,7 @@ export default function Videos() {
                             style={{
                               position: "absolute",
                               inset: 0,
-                              background: "rgba(13,27,42,0.45)",
+                              background: "rgba(33,33,33,0.45)",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
@@ -471,7 +471,7 @@ export default function Videos() {
           style={{
             position: "fixed",
             inset: 0,
-            background: "rgba(13,27,42,0.95)",
+            background: "rgba(33,33,33,0.95)",
             zIndex: 9999,
             display: "flex",
             alignItems: "center",
@@ -519,7 +519,7 @@ export default function Videos() {
                 >
                   {selected.title}
                 </h3>
-                <p style={{ fontSize: 12, color: "rgba(248,245,239,0.45)" }}>
+                <p style={{ fontSize: 12, color: "rgba(250,250,250,0.45)" }}>
                   {formatDate(selected.publishedAt)}
                 </p>
               </div>
@@ -531,7 +531,7 @@ export default function Videos() {
                   display: "flex",
                   alignItems: "center",
                   gap: 6,
-                  color: "var(--gold)",
+                  color: "var(--accent)",
                   fontSize: 12,
                   fontWeight: 700,
                   whiteSpace: "nowrap",

@@ -8,8 +8,8 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "var(--navy)",
-        color: "rgba(248,245,239,0.7)",
+        background: "var(--primary)",
+        color: "rgba(250,250,250,0.7)",
         paddingTop: 64,
       }}
     >
@@ -20,7 +20,7 @@ export default function Footer() {
             gridTemplateColumns: "2fr 1fr 1fr 1fr",
             gap: 48,
             paddingBottom: 48,
-            borderBottom: "1px solid rgba(201,168,76,0.2)",
+            borderBottom: "1px solid rgba(22,163,74,0.2)",
           }}
         >
           <div>
@@ -28,7 +28,7 @@ export default function Footer() {
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: 24,
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontWeight: 700,
                 marginBottom: 4,
               }}
@@ -40,7 +40,7 @@ export default function Footer() {
                 fontSize: 10,
                 letterSpacing: 3,
                 textTransform: "uppercase",
-                color: "rgba(248,245,239,0.4)",
+                color: "rgba(250,250,250,0.4)",
                 marginBottom: 16,
               }}
             >
@@ -65,10 +65,10 @@ export default function Footer() {
                   alignItems: "center",
                   gap: 10,
                   fontSize: 13,
-                  color: "rgba(248,245,239,0.6)",
+                  color: "rgba(250,250,250,0.6)",
                 }}
               >
-                <Mail size={14} color="var(--gold)" />{" "}
+                <Mail size={14} color="var(--accent)" />{" "}
                 pastordanielakintola@gmail.com
               </a>
               <span
@@ -79,7 +79,7 @@ export default function Footer() {
                   fontSize: 13,
                 }}
               >
-                <Phone size={14} color="var(--gold)" /> +234 803 305 3188
+                <Phone size={14} color="var(--accent)" /> +234 803 305 3188
               </span>
               <span
                 style={{
@@ -89,7 +89,7 @@ export default function Footer() {
                   fontSize: 13,
                 }}
               >
-                <MapPin size={14} color="var(--gold)" /> Lagos, Nigeria
+                <MapPin size={14} color="var(--accent)" /> Lagos, Nigeria
               </span>
             </div>
           </div>
@@ -97,7 +97,7 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontSize: 11,
                 letterSpacing: 2,
                 textTransform: "uppercase",
@@ -124,12 +124,12 @@ export default function Footer() {
                   display: "block",
                   fontSize: 13,
                   marginBottom: 10,
-                  color: "rgba(248,245,239,0.6)",
+                  color: "rgba(250,250,250,0.6)",
                   transition: "color 0.2s",
                 }}
-                onMouseEnter={(e) => (e.target.style.color = "var(--gold)")}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent)")}
                 onMouseLeave={(e) =>
-                  (e.target.style.color = "rgba(248,245,239,0.6)")
+                  (e.target.style.color = "rgba(250,250,250,0.6)")
                 }
               >
                 {label}
@@ -140,7 +140,7 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontSize: 11,
                 letterSpacing: 2,
                 textTransform: "uppercase",
@@ -163,12 +163,12 @@ export default function Footer() {
                   display: "block",
                   fontSize: 13,
                   marginBottom: 10,
-                  color: "rgba(248,245,239,0.6)",
+                  color: "rgba(250,250,250,0.6)",
                   transition: "color 0.2s",
                 }}
-                onMouseEnter={(e) => (e.target.style.color = "var(--gold)")}
+                onMouseEnter={(e) => (e.target.style.color = "var(--accent)")}
                 onMouseLeave={(e) =>
-                  (e.target.style.color = "rgba(248,245,239,0.6)")
+                  (e.target.style.color = "rgba(250,250,250,0.6)")
                 }
               >
                 {label}
@@ -179,7 +179,7 @@ export default function Footer() {
           <div>
             <h4
               style={{
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontSize: 11,
                 letterSpacing: 2,
                 textTransform: "uppercase",
@@ -203,7 +203,7 @@ export default function Footer() {
             justifyContent: "space-between",
             alignItems: "center",
             fontSize: 12,
-            color: "rgba(248,245,239,0.4)",
+            color: "rgba(250,250,250,0.4)",
           }}
         >
           <span>
@@ -212,7 +212,7 @@ export default function Footer() {
           </span>
           <Link
             to="/admin/login"
-            style={{ color: "rgba(248,245,239,0.2)", fontSize: 11 }}
+            style={{ color: "rgba(250,250,250,0.2)", fontSize: 11 }}
           >
             Admin
           </Link>
@@ -249,7 +249,9 @@ function NewsletterMini() {
 
   if (done)
     return (
-      <p style={{ fontSize: 13, color: "var(--gold)" }}>✓ You're subscribed!</p>
+      <p style={{ fontSize: 13, color: "var(--accent)" }}>
+        ✓ You're subscribed!
+      </p>
     );
 
   return (
@@ -266,7 +268,7 @@ function NewsletterMini() {
         style={{
           padding: "10px 12px",
           background: "rgba(255,255,255,0.07)",
-          border: "1px solid rgba(201,168,76,0.3)",
+          border: "1px solid rgba(22,163,74,0.3)",
           borderRadius: "var(--radius)",
           color: "var(--cream)",
           fontSize: 13,

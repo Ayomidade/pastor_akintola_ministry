@@ -113,7 +113,7 @@ export default function Dashboard() {
       value: stats.subscribers,
       icon: <Users size={22} />,
       to: "/admin/newsletter",
-      color: "var(--gold)",
+      color: "var(--accent)",
     },
     {
       label: "Unread Chats",
@@ -211,7 +211,7 @@ export default function Dashboard() {
                   fontSize: 32,
                   fontWeight: 700,
                   fontFamily: "var(--font-display)",
-                  color: loading ? "transparent" : "var(--navy)",
+                  color: loading ? "transparent" : "var(--primary)",
                   background: loading ? "var(--cream-dark)" : "transparent",
                   borderRadius: "var(--radius)",
                   marginBottom: 4,

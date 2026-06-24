@@ -50,7 +50,7 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
   return (
     <div
       style={{
-        background: "var(--navy)",
+        background: "var(--primary)",
         borderRadius: "var(--radius-lg)",
         padding: "16px 20px",
         display: "flex",
@@ -65,7 +65,7 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
           width: 44,
           height: 44,
           borderRadius: "50%",
-          background: "var(--gold)",
+          background: "var(--accent)",
           border: "none",
           display: "flex",
           alignItems: "center",
@@ -75,9 +75,9 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
         }}
       >
         {playing ? (
-          <Pause size={18} color="var(--navy)" />
+          <Pause size={18} color="var(--primary)" />
         ) : (
-          <Play size={18} color="var(--navy)" />
+          <Play size={18} color="var(--primary)" />
         )}
       </button>
 
@@ -86,7 +86,7 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
           <p
             style={{
               fontSize: 12,
-              color: "rgba(248,245,239,0.7)",
+              color: "rgba(250,250,250,0.7)",
               marginBottom: 6,
               overflow: "hidden",
               textOverflow: "ellipsis",
@@ -110,7 +110,7 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
             style={{
               width: `${progress}%`,
               height: "100%",
-              background: "var(--gold)",
+              background: "var(--accent)",
               borderRadius: 2,
               transition: "width 0.1s",
             }}
@@ -123,10 +123,10 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
             marginTop: 4,
           }}
         >
-          <span style={{ fontSize: 11, color: "rgba(248,245,239,0.5)" }}>
+          <span style={{ fontSize: 11, color: "rgba(250,250,250,0.5)" }}>
             {fmt(current)}
           </span>
-          <span style={{ fontSize: 11, color: "rgba(248,245,239,0.5)" }}>
+          <span style={{ fontSize: 11, color: "rgba(250,250,250,0.5)" }}>
             {fmt(duration)}
           </span>
         </div>
@@ -138,7 +138,7 @@ export default function AudioPlayer({ src, title, onPlay, onDownload }) {
           style={{
             background: "none",
             border: "none",
-            color: "rgba(248,245,239,0.5)",
+            color: "rgba(250,250,250,0.5)",
             cursor: "pointer",
             padding: 4,
           }}

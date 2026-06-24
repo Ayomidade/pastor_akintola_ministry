@@ -26,9 +26,9 @@ export default function SermonDetail() {
   const handleDownload = async () => {
     try {
       await sermonService.incrementDownload(sermon._id);
-      const filename=deriveFilename(sermon.title, "mp3")
-      await downloadFile(sermon.audio.url, filename)
-      toast.success("Download started.")
+      const filename = deriveFilename(sermon.title, "mp3");
+      await downloadFile(sermon.audio.url, filename);
+      toast.success("Download started.");
     } catch {
       toast.error("Download failed.");
     }
@@ -51,7 +51,7 @@ export default function SermonDetail() {
             width: 40,
             height: 40,
             border: "3px solid var(--border)",
-            borderTopColor: "var(--gold)",
+            borderTopColor: "var(--accent)",
             borderRadius: "50%",
             animation: "spin 0.8s linear infinite",
           }}
@@ -78,7 +78,7 @@ export default function SermonDetail() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to top, rgba(13,27,42,0.9) 40%, transparent)",
+              "linear-gradient(to top, rgba(33,33,33,0.9) 40%, transparent)",
           }}
         />
         <div style={{ position: "absolute", bottom: 40, left: 0, right: 0 }}>

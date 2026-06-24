@@ -42,7 +42,7 @@ export default function Register() {
     <div
       style={{
         minHeight: "100vh",
-        background: "var(--navy)",
+        background: "var(--primary)",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -65,7 +65,7 @@ export default function Register() {
               fontFamily: "var(--font-display)",
               fontSize: 22,
               fontWeight: 700,
-              color: "var(--gold)",
+              color: "var(--accent)",
               marginBottom: 4,
             }}
           >
@@ -137,7 +137,7 @@ export default function Register() {
           Already have an account?{" "}
           <Link
             to="/visitor/login"
-            style={{ color: "var(--gold)", fontWeight: 700 }}
+            style={{ color: "var(--accent)", fontWeight: 700 }}
           >
             Sign in
           </Link>

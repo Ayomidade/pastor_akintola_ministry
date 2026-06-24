@@ -83,7 +83,7 @@ export default function AdminLayout() {
       <aside
         style={{
           width: W,
-          background: "var(--navy)",
+          background: "var(--primary)",
           transition: "width 0.25s ease",
           display: "flex",
           flexDirection: "column",
@@ -109,7 +109,7 @@ export default function AdminLayout() {
               <div
                 style={{
                   fontFamily: "var(--font-display)",
-                  color: "var(--gold)",
+                  color: "var(--accent)",
                   fontSize: 16,
                   fontWeight: 700,
                 }}
@@ -120,7 +120,7 @@ export default function AdminLayout() {
                 style={{
                   fontSize: 10,
                   letterSpacing: 2,
-                  color: "rgba(248,245,239,0.4)",
+                  color: "rgba(250,250,250,0.4)",
                   textTransform: "uppercase",
                   marginTop: 2,
                 }}
@@ -134,7 +134,7 @@ export default function AdminLayout() {
             style={{
               background: "none",
               border: "none",
-              color: "rgba(248,245,239,0.4)",
+              color: "rgba(250,250,250,0.4)",
               cursor: "pointer",
               padding: 4,
             }}
@@ -154,10 +154,10 @@ export default function AdminLayout() {
                 gap: 12,
                 padding: collapsed ? "12px 0" : "12px 20px",
                 justifyContent: collapsed ? "center" : "flex-start",
-                color: isActive ? "var(--gold)" : "rgba(248,245,239,0.55)",
+                color: isActive ? "var(--accent)" : "rgba(250,250,250,0.55)",
                 background: isActive ? "rgba(201,168,76,0.1)" : "transparent",
                 borderLeft: isActive
-                  ? "3px solid var(--gold)"
+                  ? "3px solid var(--accent)"
                   : "3px solid transparent",
                 fontSize: 13,
                 fontWeight: isActive ? 700 : 400,
@@ -202,13 +202,13 @@ export default function AdminLayout() {
             <p
               style={{
                 fontSize: 12,
-                color: "rgba(248,245,239,0.4)",
+                color: "rgba(250,250,250,0.4)",
                 marginBottom: 12,
               }}
             >
               Signed in as
               <br />
-              <span style={{ color: "var(--gold)" }}>{admin?.name}</span>
+              <span style={{ color: "var(--accent)" }}>{admin?.name}</span>
             </p>
           )}
           <button
@@ -219,7 +219,7 @@ export default function AdminLayout() {
               gap: 8,
               background: "none",
               border: "none",
-              color: "rgba(248,245,239,0.5)",
+              color: "rgba(250,250,250,0.5)",
               cursor: "pointer",
               fontSize: 12,
               padding: collapsed ? "0" : "8px 0",

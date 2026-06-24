@@ -85,15 +85,15 @@ export default function Blog() {
                   cursor: "pointer",
                   background:
                     category === c || (c === "All" && !category)
-                      ? "var(--gold)"
+                      ? "var(--accent)"
                       : "transparent",
                   borderColor:
                     category === c || (c === "All" && !category)
-                      ? "var(--gold)"
+                      ? "var(--accent)"
                       : "var(--border)",
                   color:
                     category === c || (c === "All" && !category)
-                      ? "var(--navy)"
+                      ? "var(--primary)"
                       : "var(--text-secondary)",
                   transition: "var(--transition)",
                 }}
@@ -146,8 +146,8 @@ export default function Blog() {
                           <span
                             className="tag"
                             style={{
-                              background: "var(--navy)",
-                              color: "var(--gold)",
+                              background: "var(--primary)",
+                              color: "var(--accent)",
                             }}
                           >
                             {p.postType}
@@ -167,7 +167,7 @@ export default function Blog() {
                         <p
                           style={{
                             fontSize: 12,
-                            color: "var(--gold)",
+                            color: "var(--accent)",
                             fontStyle: "italic",
                             marginBottom: 8,
                           }}
@@ -210,10 +210,13 @@ export default function Blog() {
                     height: 40,
                     border: "2px solid",
                     borderColor:
-                      page === i + 1 ? "var(--gold)" : "var(--border)",
-                    background: page === i + 1 ? "var(--gold)" : "transparent",
+                      page === i + 1 ? "var(--accent)" : "var(--border)",
+                    background:
+                      page === i + 1 ? "var(--accent)" : "transparent",
                     color:
-                      page === i + 1 ? "var(--navy)" : "var(--text-secondary)",
+                      page === i + 1
+                        ? "var(--primary)"
+                        : "var(--text-secondary)",
                     borderRadius: "var(--radius)",
                     fontWeight: 700,
                     fontSize: 13,

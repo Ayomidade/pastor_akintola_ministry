@@ -70,7 +70,7 @@ function CollectionGrid() {
                       style={{
                         position: "relative",
                         height: 220,
-                        background: "var(--navy)",
+                        background: "var(--primary)",
                         overflow: "hidden",
                       }}
                     >
@@ -110,13 +110,13 @@ function CollectionGrid() {
                           position: "absolute",
                           bottom: 12,
                           right: 12,
-                          background: "rgba(13,27,42,0.8)",
+                          background: "rgba(33,33,33,0.8)",
                           backdropFilter: "blur(4px)",
                           padding: "4px 10px",
                           borderRadius: 20,
                           fontSize: 12,
                           fontWeight: 700,
-                          color: "var(--gold)",
+                          color: "var(--accent)",
                         }}
                       >
                         {col.imageCount}{" "}
@@ -156,7 +156,7 @@ function CollectionGrid() {
                       </div>
                       <ChevronRight
                         size={18}
-                        color="var(--gold)"
+                        color="var(--accent)"
                         style={{ flexShrink: 0, marginLeft: 8 }}
                       />
                     </div>
@@ -239,7 +239,7 @@ function CollectionView({ slug }) {
             width: 36,
             height: 36,
             border: "3px solid var(--border)",
-            borderTopColor: "var(--gold)",
+            borderTopColor: "var(--accent)",
             borderRadius: "50%",
             animation: "spin 0.8s linear infinite",
           }}
@@ -259,7 +259,7 @@ function CollectionView({ slug }) {
               display: "inline-flex",
               alignItems: "center",
               gap: 8,
-              color: "rgba(248,245,239,0.5)",
+              color: "rgba(250,250,250,0.5)",
               fontSize: 13,
               marginBottom: 20,
               textDecoration: "none",
@@ -277,7 +277,7 @@ function CollectionView({ slug }) {
           <p
             style={{
               marginTop: 8,
-              color: "rgba(248,245,239,0.4)",
+              color: "rgba(250,250,250,0.4)",
               fontSize: 13,
             }}
           >
@@ -309,7 +309,7 @@ function CollectionView({ slug }) {
                     cursor: "zoom-in",
                     borderRadius: "var(--radius-lg)",
                     overflow: "hidden",
-                    background: "var(--navy)",
+                    background: "var(--primary)",
                     position: "relative",
                   }}
                 >
@@ -336,7 +336,7 @@ function CollectionView({ slug }) {
                         left: 0,
                         right: 0,
                         background:
-                          "linear-gradient(to top, rgba(13,27,42,0.85), transparent)",
+                          "linear-gradient(to top, rgba(33,33,33,0.85), transparent)",
                         padding: "24px 12px 10px",
                         color: "var(--cream)",
                         fontSize: 12,
@@ -359,7 +359,7 @@ function CollectionView({ slug }) {
           style={{
             position: "fixed",
             inset: 0,
-            background: "rgba(13,27,42,0.97)",
+            background: "rgba(33,33,33,0.97)",
             zIndex: 9999,
             display: "flex",
             alignItems: "center",
@@ -424,13 +424,13 @@ function CollectionView({ slug }) {
               }}
             >
               {selected.caption && (
-                <p style={{ color: "rgba(248,245,239,0.7)", fontSize: 14 }}>
+                <p style={{ color: "rgba(250,250,250,0.7)", fontSize: 14 }}>
                   {selected.caption}
                 </p>
               )}
               <p
                 style={{
-                  color: "rgba(248,245,239,0.3)",
+                  color: "rgba(250,250,250,0.3)",
                   fontSize: 12,
                   marginLeft: "auto",
                 }}

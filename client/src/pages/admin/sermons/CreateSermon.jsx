@@ -169,7 +169,7 @@ export default function CreateSermon() {
               <label
                 style={{
                   display: "block",
-                  border: `2px dashed ${audio ? "var(--gold)" : "var(--border)"}`,
+                  border: `2px dashed ${audio ? "var(--accent)" : "var(--border)"}`,
                   borderRadius: "var(--radius-lg)",
                   cursor: "pointer",
                   padding: 32,
@@ -180,14 +180,14 @@ export default function CreateSermon() {
                   size={32}
                   style={{
                     margin: "0 auto 12px",
-                    color: audio ? "var(--gold)" : "var(--border)",
+                    color: audio ? "var(--accent)" : "var(--border)",
                   }}
                 />
                 <p
                   style={{
                     fontSize: 14,
                     fontWeight: 600,
-                    color: audio ? "var(--navy)" : "var(--text-muted)",
+                    color: audio ? "var(--primary)" : "var(--text-muted)",
                   }}
                 >
                   {audio ? audio.name : "Click to upload audio"}
@@ -221,7 +221,7 @@ export default function CreateSermon() {
                     alignItems: "center",
                   }}
                 >
-                  <span style={{ fontSize: 13, color: "var(--navy)" }}>
+                  <span style={{ fontSize: 13, color: "var(--primary)" }}>
                     {audio.name}
                   </span>
                   <button

@@ -100,7 +100,7 @@ export default function Chat() {
     >
       <div
         style={{
-          background: "var(--navy)",
+          background: "var(--primary)",
           padding: "20px 0",
           borderBottom: "1px solid rgba(201,168,76,0.2)",
         }}
@@ -113,7 +113,7 @@ export default function Chat() {
                 height: 48,
                 borderRadius: "50%",
                 overflow: "hidden",
-                border: "2px solid var(--gold)",
+                border: "2px solid var(--accent)",
               }}
             >
               <img
@@ -138,7 +138,7 @@ export default function Chat() {
                   color:
                     session?.status === "active"
                       ? "#22c55e"
-                      : "rgba(248,245,239,0.5)",
+                      : "rgba(250,250,250,0.5)",
                 }}
               >
                 {session?.status === "active"
@@ -206,10 +206,10 @@ export default function Chat() {
                   maxWidth: "70%",
                   padding: "12px 16px",
                   background:
-                    msg.sender === "visitor" ? "var(--gold)" : "var(--white)",
+                    msg.sender === "visitor" ? "var(--accent)" : "var(--white)",
                   color:
                     msg.sender === "visitor"
-                      ? "var(--navy)"
+                      ? "var(--primary)"
                       : "var(--text-primary)",
                   borderRadius:
                     msg.sender === "visitor"
@@ -250,7 +250,7 @@ export default function Chat() {
                         width: 6,
                         height: 6,
                         borderRadius: "50%",
-                        background: "var(--gold)",
+                        background: "var(--accent)",
                         animation: `bounce 1s infinite ${i * 0.2}s`,
                       }}
                     />

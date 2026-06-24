@@ -94,7 +94,7 @@ export default function PostList() {
                 width: 32,
                 height: 32,
                 border: "3px solid var(--border)",
-                borderTopColor: "var(--gold)",
+                borderTopColor: "var(--accent)",
                 borderRadius: "50%",
                 animation: "spin 0.8s linear infinite",
                 margin: "0 auto",
@@ -181,7 +181,7 @@ export default function PostList() {
                               style={{
                                 fontWeight: 600,
                                 fontSize: 14,
-                                color: "var(--navy)",
+                                color: "var(--primary)",
                               }}
                             >
                               {p.title}
@@ -190,7 +190,7 @@ export default function PostList() {
                               <p
                                 style={{
                                   fontSize: 11,
-                                  color: "var(--gold)",
+                                  color: "var(--accent)",
                                   fontStyle: "italic",
                                 }}
                               >
@@ -237,7 +237,7 @@ export default function PostList() {
                               background: "none",
                               border: "none",
                               color: p.isPublished
-                                ? "var(--gold)"
+                                ? "var(--accent)"
                                 : "var(--text-muted)",
                               cursor: "pointer",
                               padding: 4,
@@ -365,7 +365,7 @@ export default function PostList() {
                           background: "none",
                           border: "none",
                           color: p.isPublished
-                            ? "var(--gold)"
+                            ? "var(--accent)"
                             : "var(--text-muted)",
                           cursor: "pointer",
                         }}
@@ -419,10 +419,11 @@ export default function PostList() {
                   width: 36,
                   height: 36,
                   border: "2px solid",
-                  borderColor: page === i + 1 ? "var(--gold)" : "var(--border)",
-                  background: page === i + 1 ? "var(--gold)" : "transparent",
+                  borderColor:
+                    page === i + 1 ? "var(--accent)" : "var(--border)",
+                  background: page === i + 1 ? "var(--accent)" : "transparent",
                   color:
-                    page === i + 1 ? "var(--navy)" : "var(--text-secondary)",
+                    page === i + 1 ? "var(--primary)" : "var(--text-secondary)",
                   borderRadius: "var(--radius)",
                   fontWeight: 700,
                   fontSize: 13,

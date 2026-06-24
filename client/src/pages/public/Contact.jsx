@@ -98,19 +98,19 @@ export default function Contact() {
               >
                 {[
                   {
-                    icon: <Mail size={18} color="var(--gold)" />,
+                    icon: <Mail size={18} color="var(--accent)" />,
                     label: "Email",
                     value: "pastordanielakintola@gmail.com",
                     href: "mailto:pastordanielakintola@gmail.com",
                   },
                   {
-                    icon: <Phone size={18} color="var(--gold)" />,
+                    icon: <Phone size={18} color="var(--accent)" />,
                     label: "Phone",
                     value: "+234 803 305 3188",
                     href: "tel:+2348033053188",
                   },
                   {
-                    icon: <MapPin size={18} color="var(--gold)" />,
+                    icon: <MapPin size={18} color="var(--accent)" />,
                     label: "Location",
                     value: "Lagos, Nigeria",
                     href: null,
@@ -256,14 +256,14 @@ export default function Contact() {
               <div
                 style={{
                   marginTop: 36,
-                  background: "var(--navy)",
+                  background: "var(--primary)",
                   borderRadius: "var(--radius-lg)",
                   padding: "20px 24px",
                 }}
               >
                 <p
                   style={{
-                    color: "var(--gold)",
+                    color: "var(--accent)",
                     fontWeight: 700,
                     fontSize: 14,
                     marginBottom: 6,
@@ -273,7 +273,7 @@ export default function Contact() {
                 </p>
                 <p
                   style={{
-                    color: "rgba(248,245,239,0.65)",
+                    color: "rgba(250,250,250,0.65)",
                     fontSize: 13,
                     lineHeight: 1.7,
                     marginBottom: 16,
@@ -317,9 +317,9 @@ export default function Contact() {
                       flex: 1,
                       padding: "11px 0",
                       border: "none",
-                      background: type === t ? "var(--gold)" : "transparent",
+                      background: type === t ? "var(--accent)" : "transparent",
                       color:
-                        type === t ? "var(--navy)" : "var(--text-secondary)",
+                        type === t ? "var(--primary)" : "var(--text-secondary)",
                       fontWeight: 700,
                       fontSize: 12,
                       letterSpacing: 1,

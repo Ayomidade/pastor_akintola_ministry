@@ -54,9 +54,10 @@ export default function Events() {
                   letterSpacing: 1,
                   textTransform: "uppercase",
                   cursor: "pointer",
-                  background: filter === f ? "var(--gold)" : "transparent",
-                  borderColor: filter === f ? "var(--gold)" : "var(--border)",
-                  color: filter === f ? "var(--navy)" : "var(--text-secondary)",
+                  background: filter === f ? "var(--accent)" : "transparent",
+                  borderColor: filter === f ? "var(--accent)" : "var(--border)",
+                  color:
+                    filter === f ? "var(--primary)" : "var(--text-secondary)",
                   transition: "var(--transition)",
                 }}
               >
@@ -105,7 +106,7 @@ export default function Events() {
                       >
                         <div
                           style={{
-                            background: "var(--navy)",
+                            background: "var(--primary)",
                             borderRadius: "var(--radius)",
                             padding: "10px 14px",
                             textAlign: "center",
@@ -116,7 +117,7 @@ export default function Events() {
                             style={{
                               fontSize: 22,
                               fontWeight: 700,
-                              color: "var(--gold)",
+                              color: "var(--accent)",
                               lineHeight: 1,
                               fontFamily: "var(--font-display)",
                             }}
@@ -128,7 +129,7 @@ export default function Events() {
                               fontSize: 10,
                               letterSpacing: 1,
                               textTransform: "uppercase",
-                              color: "rgba(248,245,239,0.6)",
+                              color: "rgba(250,250,250,0.6)",
                               marginTop: 2,
                             }}
                           >

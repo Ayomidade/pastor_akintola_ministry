@@ -85,7 +85,7 @@ export default function EditSermon() {
             width: 32,
             height: 32,
             border: "3px solid var(--border)",
-            borderTopColor: "var(--gold)",
+            borderTopColor: "var(--accent)",
             borderRadius: "50%",
             animation: "spin 0.8s linear infinite",
             margin: "0 auto",
@@ -215,7 +215,7 @@ export default function EditSermon() {
               <label
                 style={{
                   display: "block",
-                  border: `2px dashed ${audio ? "var(--gold)" : "var(--border)"}`,
+                  border: `2px dashed ${audio ? "var(--accent)" : "var(--border)"}`,
                   borderRadius: "var(--radius-lg)",
                   cursor: "pointer",
                   padding: 24,
@@ -226,13 +226,13 @@ export default function EditSermon() {
                   size={24}
                   style={{
                     margin: "0 auto 8px",
-                    color: audio ? "var(--gold)" : "var(--border)",
+                    color: audio ? "var(--accent)" : "var(--border)",
                   }}
                 />
                 <p
                   style={{
                     fontSize: 13,
-                    color: audio ? "var(--navy)" : "var(--text-muted)",
+                    color: audio ? "var(--primary)" : "var(--text-muted)",
                   }}
                 >
                   {audio ? audio.name : "Click to replace audio file"}

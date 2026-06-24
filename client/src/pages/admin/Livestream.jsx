@@ -65,7 +65,7 @@ export default function Livestream() {
             background: "var(--white)",
             borderRadius: "var(--radius-lg)",
             padding: 24,
-            border: `1px solid ${active ? "var(--gold)" : "var(--border)"}`,
+            border: `1px solid ${active ? "var(--accent)" : "var(--border)"}`,
             marginBottom: 24,
           }}
         >

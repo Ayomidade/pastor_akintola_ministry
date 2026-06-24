@@ -141,7 +141,7 @@ export default function Ebooks() {
                             }
                             style={{
                               fontSize: 12,
-                              color: "var(--gold)",
+                              color: "var(--accent)",
                               cursor: "pointer",
                               fontWeight: 600,
                             }}

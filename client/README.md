@@ -6,17 +6,17 @@ React + Vite frontend for the Pastor Akintola Ministries platform. Built with Re
 
 ## Tech Stack
 
-| Technology | Purpose |
-|---|---|
-| React 18 | UI framework |
-| Vite | Build tool & dev server |
-| React Router v6 | Client-side routing with nested routes |
-| Axios | HTTP client with interceptors |
-| Socket.io-client | Real-time chat connection |
-| React Quill | Rich text editor for post creation |
-| React Hot Toast | Toast notifications |
-| Lucide React | Icon library |
-| date-fns | Date formatting |
+| Technology       | Purpose                                |
+| ---------------- | -------------------------------------- |
+| React 18         | UI framework                           |
+| Vite             | Build tool & dev server                |
+| React Router v6  | Client-side routing with nested routes |
+| Axios            | HTTP client with interceptors          |
+| Socket.io-client | Real-time chat connection              |
+| React Quill      | Rich text editor for post creation     |
+| React Hot Toast  | Toast notifications                    |
+| Lucide React     | Icon library                           |
+| date-fns         | Date formatting                        |
 
 ---
 
@@ -151,11 +151,14 @@ Open `src/config/socials.js` and replace all placeholder values:
 export const SOCIALS = {
   youtube: {
     url: "https://www.youtube.com/@YourHandle",
-    channelId: "UCxxxxxxxxxxxxxxxxxx",   // For Videos page API fetch
+    channelId: "UCxxxxxxxxxxxxxxxxxx", // For Videos page API fetch
     handle: "@YourHandle",
   },
   facebook: { url: "https://www.facebook.com/YourPage" },
-  instagram: { url: "https://www.instagram.com/yourhandle", handle: "@yourhandle" },
+  instagram: {
+    url: "https://www.instagram.com/yourhandle",
+    handle: "@yourhandle",
+  },
   twitter: { url: "https://www.twitter.com/yourhandle", handle: "@yourhandle" },
   whatsapp: { url: "https://wa.me/234XXXXXXXXXX" },
 };
@@ -173,12 +176,12 @@ App runs at `http://localhost:5173`
 
 ## Environment Variables
 
-| Variable | Required | Description |
-|---|---|---|
-| `VITE_API_URL` | ✅ | Backend API base URL |
-| `VITE_SOCKET_URL` | ✅ | Backend Socket.io server URL (no `/api`) |
-| `VITE_YOUTUBE_API_KEY` | Optional | YouTube Data API v3 key for the Videos page |
-| `VITE_PAYSTACK_PUBLIC_KEY` | Optional | Paystack public key for online donations |
+| Variable                   | Required | Description                                 |
+| -------------------------- | -------- | ------------------------------------------- |
+| `VITE_API_URL`             | ✅       | Backend API base URL                        |
+| `VITE_SOCKET_URL`          | ✅       | Backend Socket.io server URL (no `/api`)    |
+| `VITE_YOUTUBE_API_KEY`     | Optional | YouTube Data API v3 key for the Videos page |
+| `VITE_PAYSTACK_PUBLIC_KEY` | Optional | Paystack public key for online donations    |
 
 > `VITE_YOUTUBE_API_KEY` — without this, the Videos page shows a "Visit YouTube Channel" fallback. Get a free key at [console.cloud.google.com](https://console.cloud.google.com), enable YouTube Data API v3, and create an API key.
 
@@ -188,10 +191,10 @@ App runs at `http://localhost:5173`
 
 ## Scripts
 
-| Command | Description |
-|---|---|
-| `npm run dev` | Start Vite dev server |
-| `npm run build` | Build for production → `dist/` |
+| Command           | Description                      |
+| ----------------- | -------------------------------- |
+| `npm run dev`     | Start Vite dev server            |
+| `npm run build`   | Build for production → `dist/`   |
 | `npm run preview` | Preview production build locally |
 
 ---
@@ -202,23 +205,23 @@ The entire UI is built on CSS custom properties defined in `src/index.css`. No e
 
 ### Color Palette
 
-| Variable | Value | Usage |
-|---|---|---|
-| `--navy` | `#0D1B2A` | Primary background, headings |
-| `--navy-light` | `#162436` | Sidebar, cards on dark bg |
-| `--gold` | `#C9A84C` | Accents, buttons, highlights |
-| `--gold-light` | `#E2C97E` | Gold hover state |
-| `--gold-dark` | `#A8863A` | Gold pressed state |
-| `--cream` | `#F8F5EF` | Page background |
-| `--cream-dark` | `#EDE8DE` | Section alternates |
-| `--border` | `#DDD5C0` | Card borders, dividers |
+| Variable          | Value     | Usage                        |
+| ----------------- | --------- | ---------------------------- |
+| `--primary`       | `#212121` | Primary background, headings |
+| `--primary-light` | `#2E2E2E` | Sidebar, cards on dark bg    |
+| `--accent`        | `#16A34A` | Accents, buttons, highlights |
+| `--accent-light`  | `#22C55E` | Gold hover state             |
+| `--accent-dark`   | `#15803D` | Gold pressed state           |
+| `--cream`         | `#FAFAFA` | Page background              |
+| `--cream-dark`    | `#F0FAF4` | Section alternates           |
+| `--border`        | `#E5E5E5` | Card borders, dividers       |
 
 ### Typography
 
-| Font | Usage |
-|---|---|
+| Font             | Usage                                      |
+| ---------------- | ------------------------------------------ |
 | Playfair Display | Headings, display text, editorial elements |
-| Lato | Body text, UI labels, buttons |
+| Lato             | Body text, UI labels, buttons              |
 
 Both loaded from Google Fonts via `index.html`.
 
@@ -250,55 +253,56 @@ Both loaded from Google Fonts via `index.html`.
 
 ### Public Routes
 
-| Path | Component | Description |
-|---|---|---|
-| `/` | `Home` | Landing page |
-| `/about` | `About` | Pastor biography |
-| `/blog` | `Blog` | Post listing |
-| `/blog/:slug` | `PostDetail` | Individual post |
-| `/sermons` | `Sermons` | Sermon listing |
-| `/sermons/:slug` | `SermonDetail` | Individual sermon |
-| `/ebooks` | `Ebooks` | Ebook library |
-| `/events` | `Events` | Events listing |
-| `/media` | `Media` | Photo gallery |
-| `/videos` | `Videos` | YouTube videos |
-| `/contact` | `Contact` | Contact & prayer form |
-| `/donate` | `Donate` | Donation page |
-| `/visitor/register` | `Register` | Visitor signup |
-| `/visitor/login` | `VisitorLogin` | Visitor login |
-| `/chat` | `Chat` | Counselling chat (visitor guard) |
+| Path                | Component      | Description                      |
+| ------------------- | -------------- | -------------------------------- |
+| `/`                 | `Home`         | Landing page                     |
+| `/about`            | `About`        | Pastor biography                 |
+| `/blog`             | `Blog`         | Post listing                     |
+| `/blog/:slug`       | `PostDetail`   | Individual post                  |
+| `/sermons`          | `Sermons`      | Sermon listing                   |
+| `/sermons/:slug`    | `SermonDetail` | Individual sermon                |
+| `/ebooks`           | `Ebooks`       | Ebook library                    |
+| `/events`           | `Events`       | Events listing                   |
+| `/media`            | `Media`        | Photo gallery                    |
+| `/videos`           | `Videos`       | YouTube videos                   |
+| `/contact`          | `Contact`      | Contact & prayer form            |
+| `/donate`           | `Donate`       | Donation page                    |
+| `/visitor/register` | `Register`     | Visitor signup                   |
+| `/visitor/login`    | `VisitorLogin` | Visitor login                    |
+| `/chat`             | `Chat`         | Counselling chat (visitor guard) |
 
 ### Admin Routes (all protected by `ProtectedRoute`)
 
-| Path | Component |
-|---|---|
-| `/admin/login` | `AdminLogin` |
-| `/admin/dashboard` | `Dashboard` |
-| `/admin/posts` | `PostList` |
-| `/admin/posts/create` | `CreatePost` |
-| `/admin/posts/edit/:id` | `EditPost` |
-| `/admin/sermons` | `SermonList` |
-| `/admin/sermons/create` | `CreateSermon` |
-| `/admin/sermons/edit/:id` | `EditSermon` |
-| `/admin/ebooks` | `EbookList` |
-| `/admin/ebooks/upload` | `UploadEbook` |
-| `/admin/ebooks/edit/:id` | `EditEbook` |
-| `/admin/events` | `EventList` |
-| `/admin/events/create` | `CreateEvent` |
-| `/admin/events/edit/:id` | `EditEvent` |
-| `/admin/media` | `MediaLibrary` |
-| `/admin/comments` | `Comments` |
-| `/admin/contacts` | `Contacts` |
-| `/admin/newsletter` | `Newsletter` |
-| `/admin/livestream` | `Livestream` |
-| `/admin/chat` | `ChatDashboard` |
-| `/admin/chat/:sessionId` | `ChatWindow` |
+| Path                      | Component       |
+| ------------------------- | --------------- |
+| `/admin/login`            | `AdminLogin`    |
+| `/admin/dashboard`        | `Dashboard`     |
+| `/admin/posts`            | `PostList`      |
+| `/admin/posts/create`     | `CreatePost`    |
+| `/admin/posts/edit/:id`   | `EditPost`      |
+| `/admin/sermons`          | `SermonList`    |
+| `/admin/sermons/create`   | `CreateSermon`  |
+| `/admin/sermons/edit/:id` | `EditSermon`    |
+| `/admin/ebooks`           | `EbookList`     |
+| `/admin/ebooks/upload`    | `UploadEbook`   |
+| `/admin/ebooks/edit/:id`  | `EditEbook`     |
+| `/admin/events`           | `EventList`     |
+| `/admin/events/create`    | `CreateEvent`   |
+| `/admin/events/edit/:id`  | `EditEvent`     |
+| `/admin/media`            | `MediaLibrary`  |
+| `/admin/comments`         | `Comments`      |
+| `/admin/contacts`         | `Contacts`      |
+| `/admin/newsletter`       | `Newsletter`    |
+| `/admin/livestream`       | `Livestream`    |
+| `/admin/chat`             | `ChatDashboard` |
+| `/admin/chat/:sessionId`  | `ChatWindow`    |
 
 ---
 
 ## Auth Flow
 
 ### Admin
+
 1. On app load, `AuthContext` calls `GET /api/auth/setup-status`
 2. If `isSetupDone: false` → redirect to setup form
 3. If `isSetupDone: true` → call `GET /api/auth/me`
@@ -306,6 +310,7 @@ Both loaded from Google Fonts via `index.html`.
 5. `ProtectedRoute` checks `admin` state — redirects to `/admin/login` if null
 
 ### Visitor
+
 1. Visitor registers → `POST /api/visitors/register`
 2. Visitor logs in → `POST /api/visitors/login` → receives JWT
 3. JWT stored in `localStorage` as `visitorToken`
@@ -320,6 +325,7 @@ Both loaded from Google Fonts via `index.html`.
 The counselling chat uses Socket.io on the `/chat` namespace.
 
 ### Visitor Flow
+
 1. Must be logged in (`VisitorRoute` guard)
 2. On mount, `POST /api/chat/session` creates or returns existing session
 3. Past messages loaded via `GET /api/chat/session/:id/messages`
@@ -328,6 +334,7 @@ The counselling chat uses Socket.io on the `/chat` namespace.
 6. Received via `socket.on("receive_message", ...)`
 
 ### Admin Flow
+
 1. `ChatDashboard` polls `GET /api/chat/admin/unread` every 30 seconds for badge count
 2. Socket listens for `new_visitor_message` and `unread_count_changed` events
 3. Opening `ChatWindow` joins the room as admin — marks session as read
@@ -338,16 +345,19 @@ The counselling chat uses Socket.io on the `/chat` namespace.
 ## Key Implementation Notes
 
 ### Axios base instance
+
 All API calls go through `src/api/axios.js`:
+
 ```js
 const api = axios.create({
   baseURL: import.meta.env.VITE_API_URL,
-  withCredentials: true,  // sends session cookie for admin routes
+  withCredentials: true, // sends session cookie for admin routes
 });
 // Attaches visitor JWT if present in localStorage
 ```
 
 ### YouTube Videos page
+
 - Requires `VITE_YOUTUBE_API_KEY` in `.env`
 - Also requires correct `channelId` in `src/config/socials.js`
 - Falls back to a "Visit YouTube" CTA if API key is missing
@@ -355,12 +365,14 @@ const api = axios.create({
 - Videos play in an embedded iframe modal
 
 ### Paystack Donations
+
 - Loaded via CDN script tag in `Donate.jsx`
 - Triggered via `window.PaystackPop.setup({ ... }).openIframe()`
 - Requires `VITE_PAYSTACK_PUBLIC_KEY` in `.env`
 - Falls back gracefully if Paystack script hasn't loaded
 
 ### Quill Rich Text Editor
+
 - Used in `CreatePost` and `EditPost`
 - Content is sanitized on the **backend** with `sanitize-html` before storage
 - Minimum height set to 300px via CSS override
@@ -371,12 +383,12 @@ const api = axios.create({
 
 Every page is fully responsive. Key breakpoints:
 
-| Breakpoint | Behaviour |
-|---|---|
-| `< 1024px` | 4-col grids → 2-col, sidebar collapses |
-| `< 900px` | 2-col layouts → 1-col, admin tables → cards |
-| `< 768px` | Most grids → 1-col, mobile nav active |
-| `< 480px` | Newsletter form stacks, amount grid 2-col |
+| Breakpoint | Behaviour                                   |
+| ---------- | ------------------------------------------- |
+| `< 1024px` | 4-col grids → 2-col, sidebar collapses      |
+| `< 900px`  | 2-col layouts → 1-col, admin tables → cards |
+| `< 768px`  | Most grids → 1-col, mobile nav active       |
+| `< 480px`  | Newsletter form stacks, amount grid 2-col   |
 
 Admin panel uses a collapsible sidebar — collapses to icon-only mode on smaller screens. Tables on mobile are replaced with card-based layouts.
 

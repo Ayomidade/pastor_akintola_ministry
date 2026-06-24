@@ -76,9 +76,9 @@ export default function Comments() {
               letterSpacing: 1,
               textTransform: "uppercase",
               cursor: "pointer",
-              background: filter === f ? "var(--gold)" : "transparent",
-              borderColor: filter === f ? "var(--gold)" : "var(--border)",
-              color: filter === f ? "var(--navy)" : "var(--text-secondary)",
+              background: filter === f ? "var(--accent)" : "transparent",
+              borderColor: filter === f ? "var(--accent)" : "var(--border)",
+              color: filter === f ? "var(--primary)" : "var(--text-secondary)",
               transition: "var(--transition)",
             }}
           >
@@ -97,7 +97,7 @@ export default function Comments() {
               width: 32,
               height: 32,
               border: "3px solid var(--border)",
-              borderTopColor: "var(--gold)",
+              borderTopColor: "var(--accent)",
               borderRadius: "50%",
               animation: "spin 0.8s linear infinite",
               margin: "0 auto",
@@ -131,7 +131,7 @@ export default function Comments() {
                 background: "var(--white)",
                 borderRadius: "var(--radius-lg)",
                 padding: 20,
-                border: `1px solid ${!c.isApproved ? "var(--gold)" : "var(--border)"}`,
+                border: `1px solid ${!c.isApproved ? "var(--accent)" : "var(--border)"}`,
               }}
             >
               <div
@@ -158,12 +158,12 @@ export default function Comments() {
                         width: 32,
                         height: 32,
                         borderRadius: "50%",
-                        background: "var(--gold)",
+                        background: "var(--accent)",
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
                         fontWeight: 700,
-                        color: "var(--navy)",
+                        color: "var(--primary)",
                         fontSize: 13,
                       }}
                     >
@@ -209,13 +209,13 @@ export default function Comments() {
                         alignItems: "center",
                         gap: 4,
                         padding: "6px 12px",
-                        background: "var(--gold)",
+                        background: "var(--accent)",
                         border: "none",
                         borderRadius: "var(--radius)",
                         fontSize: 12,
                         fontWeight: 700,
                         cursor: "pointer",
-                        color: "var(--navy)",
+                        color: "var(--primary)",
                       }}
                     >
                       <Check size={14} /> Approve
@@ -250,7 +250,7 @@ export default function Comments() {
                   <span
                     style={{
                       fontSize: 11,
-                      color: "var(--gold)",
+                      color: "var(--accent)",
                       fontWeight: 700,
                     }}
                   >

@@ -78,9 +78,9 @@ export default function Contacts() {
               letterSpacing: 1,
               textTransform: "uppercase",
               cursor: "pointer",
-              background: type === v ? "var(--gold)" : "transparent",
-              borderColor: type === v ? "var(--gold)" : "var(--border)",
-              color: type === v ? "var(--navy)" : "var(--text-secondary)",
+              background: type === v ? "var(--accent)" : "transparent",
+              borderColor: type === v ? "var(--accent)" : "var(--border)",
+              color: type === v ? "var(--primary)" : "var(--text-secondary)",
               transition: "var(--transition)",
             }}
           >
@@ -96,7 +96,7 @@ export default function Contacts() {
               width: 32,
               height: 32,
               border: "3px solid var(--border)",
-              borderTopColor: "var(--gold)",
+              borderTopColor: "var(--accent)",
               borderRadius: "50%",
               animation: "spin 0.8s linear infinite",
               margin: "0 auto",
@@ -129,7 +129,7 @@ export default function Contacts() {
               style={{
                 background: "var(--white)",
                 borderRadius: "var(--radius-lg)",
-                border: `1px solid ${!c.isRead ? "var(--gold)" : "var(--border)"}`,
+                border: `1px solid ${!c.isRead ? "var(--accent)" : "var(--border)"}`,
                 overflow: "hidden",
               }}
             >
@@ -155,7 +155,7 @@ export default function Contacts() {
                         width: 8,
                         height: 8,
                         borderRadius: "50%",
-                        background: "var(--gold)",
+                        background: "var(--accent)",
                         flexShrink: 0,
                       }}
                     />
@@ -180,7 +180,7 @@ export default function Contacts() {
                           ? "rgba(201,168,76,0.15)"
                           : "rgba(59,130,246,0.1)",
                       color:
-                        c.type === "prayer" ? "var(--gold-dark)" : "#3b82f6",
+                        c.type === "prayer" ? "var(--accent-dark)" : "#3b82f6",
                       letterSpacing: 1,
                       textTransform: "uppercase",
                     }}

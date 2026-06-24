@@ -84,7 +84,7 @@ export default function Sermons() {
                         style={{
                           position: "absolute",
                           inset: 0,
-                          background: "rgba(13,27,42,0.3)",
+                          background: "rgba(33,33,33,0.3)",
                           display: "flex",
                           alignItems: "center",
                           justifyContent: "center",
@@ -103,13 +103,13 @@ export default function Sermons() {
                             width: 52,
                             height: 52,
                             borderRadius: "50%",
-                            background: "var(--gold)",
+                            background: "var(--accent)",
                             display: "flex",
                             alignItems: "center",
                             justifyContent: "center",
                           }}
                         >
-                          <Headphones size={24} color="var(--navy)" />
+                          <Headphones size={24} color="var(--primary)" />
                         </div>
                       </div>
                     </div>
@@ -192,10 +192,13 @@ export default function Sermons() {
                     height: 40,
                     border: "2px solid",
                     borderColor:
-                      page === i + 1 ? "var(--gold)" : "var(--border)",
-                    background: page === i + 1 ? "var(--gold)" : "transparent",
+                      page === i + 1 ? "var(--accent)" : "var(--border)",
+                    background:
+                      page === i + 1 ? "var(--accent)" : "transparent",
                     color:
-                      page === i + 1 ? "var(--navy)" : "var(--text-secondary)",
+                      page === i + 1
+                        ? "var(--primary)"
+                        : "var(--text-secondary)",
                     borderRadius: "var(--radius)",
                     fontWeight: 700,
                     fontSize: 13,

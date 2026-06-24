@@ -75,7 +75,7 @@ export default function PostDetail() {
             width: 40,
             height: 40,
             border: "3px solid var(--border)",
-            borderTopColor: "var(--gold)",
+            borderTopColor: "var(--accent)",
             borderRadius: "50%",
             animation: "spin 0.8s linear infinite",
           }}
@@ -124,7 +124,7 @@ export default function PostDetail() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(to top, rgba(13,27,42,0.8), transparent)",
+              "linear-gradient(to top, rgba(33,33,33,0.8), transparent)",
           }}
         />
       </div>
@@ -159,7 +159,7 @@ export default function PostDetail() {
           {post.postType !== "article" && (
             <span
               className="tag"
-              style={{ background: "var(--navy)", color: "var(--gold)" }}
+              style={{ background: "var(--primary)", color: "var(--accent)" }}
             >
               {post.postType}
             </span>
@@ -179,18 +179,18 @@ export default function PostDetail() {
         {post.scripture && (
           <div
             style={{
-              background: "var(--gold)",
+              background: "var(--accent)",
               padding: "16px 20px",
               borderRadius: "var(--radius)",
               marginBottom: 24,
-              borderLeft: "4px solid var(--gold-dark)",
+              borderLeft: "4px solid var(--accent-dark)",
             }}
           >
             <p
               style={{
                 fontFamily: "var(--font-display)",
                 fontStyle: "italic",
-                color: "var(--navy)",
+                color: "var(--primary)",
                 fontSize: 16,
               }}
             >
@@ -230,9 +230,9 @@ export default function PostDetail() {
               gap: 8,
               padding: "10px 20px",
               border: "2px solid",
-              borderColor: liked ? "var(--gold)" : "var(--border)",
-              background: liked ? "var(--gold)" : "transparent",
-              color: liked ? "var(--navy)" : "var(--text-secondary)",
+              borderColor: liked ? "var(--accent)" : "var(--border)",
+              background: liked ? "var(--accent)" : "transparent",
+              color: liked ? "var(--primary)" : "var(--text-secondary)",
               borderRadius: "var(--radius)",
               fontWeight: 700,
               fontSize: 13,
@@ -291,7 +291,7 @@ export default function PostDetail() {
                 style={{
                   background: "none",
                   border: "none",
-                  color: "var(--gold)",
+                  color: "var(--accent)",
                   fontSize: 12,
                   cursor: "pointer",
                   marginBottom: 16,
@@ -359,10 +359,10 @@ export default function PostDetail() {
 
       <style>
         {`.post-content { font-size: 17px; line-height: 1.9; color: var(--text-secondary); }
-        .post-content h2,.post-content h3 { color: var(--navy); margin: 32px 0 16px; }
+        .post-content h2,.post-content h3 { color: var(--primary); margin: 32px 0 16px; }
         .post-content p { margin-bottom: 20px; }
         .post-content img { border-radius: var(--radius); margin: 24px 0; }
-        .post-content blockquote { border-left: 4px solid var(--gold); padding: 12px 20px; background: var(--cream-dark); border-radius: 0 var(--radius) var(--radius) 0; margin: 24px 0; font-style: italic; }`}
+        .post-content blockquote { border-left: 4px solid var(--accent); padding: 12px 20px; background: var(--cream-dark); border-radius: 0 var(--radius) var(--radius) 0; margin: 24px 0; font-style: italic; }`}
       </style>
     </div>
   );
@@ -391,12 +391,12 @@ function CommentItem({ comment, onReply }) {
               width: 36,
               height: 36,
               borderRadius: "50%",
-              background: "var(--gold)",
+              background: "var(--accent)",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
               fontWeight: 700,
-              color: "var(--navy)",
+              color: "var(--primary)",
               fontSize: 14,
             }}
           >
@@ -414,7 +414,7 @@ function CommentItem({ comment, onReply }) {
           style={{
             background: "none",
             border: "none",
-            color: "var(--gold)",
+            color: "var(--accent)",
             fontSize: 12,
             fontWeight: 700,
             cursor: "pointer",
@@ -463,13 +463,13 @@ function CommentItem({ comment, onReply }) {
                     width: 28,
                     height: 28,
                     borderRadius: "50%",
-                    background: "var(--navy)",
+                    background: "var(--primary)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
                     fontSize: 12,
                     fontWeight: 700,
-                    color: "var(--gold)",
+                    color: "var(--accent)",
                   }}
                 >
                   {r.name[0].toUpperCase()}

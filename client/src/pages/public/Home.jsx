@@ -63,7 +63,7 @@ export default function Home() {
       <section
         style={{
           minHeight: "100vh",
-          background: "var(--navy)",
+          background: "var(--primary)",
           display: "flex",
           alignItems: "center",
           position: "relative",
@@ -79,7 +79,7 @@ export default function Home() {
               width: "100%",
               height: "100%",
               objectFit: "cover",
-              opacity: 0.15,
+              opacity: 0.25,
             }}
           />
         </div>
@@ -88,7 +88,7 @@ export default function Home() {
             position: "absolute",
             inset: 0,
             background:
-              "linear-gradient(135deg, rgba(13, 27, 42, 0.28) 50%, rgba(13,27,42,0.7) 100%)",
+              "linear-gradient(135deg, rgba(13, 27, 42, 0.04) 50%, rgba(33, 33, 33, 0.24) 100%)",
           }}
         />
 
@@ -115,13 +115,13 @@ export default function Home() {
             >
               Walking in Faith,
               <br />
-              <em style={{ color: "var(--gold)" }}>Living in Grace</em>
+              <em style={{ color: "var(--accent)" }}>Living in Grace</em>
             </h1>
             <div className="gold-divider" style={{ marginBottom: 20 }} />
             <p
               style={{
                 fontSize: "clamp(0.95rem, 2vw, 1.15rem)",
-                color: "rgba(248,245,239,0.72)",
+                color: "rgba(250,250,250,0.72)",
                 lineHeight: 1.85,
                 maxWidth: 520,
                 marginBottom: 36,
@@ -154,7 +154,7 @@ export default function Home() {
                   fontSize: 11,
                   letterSpacing: 2,
                   textTransform: "uppercase",
-                  color: "rgba(248,245,239,0.3)",
+                  color: "rgba(250,250,250,0.3)",
                 }}
               >
                 Follow us
@@ -190,22 +190,22 @@ export default function Home() {
                     width: 38,
                     height: 38,
                     borderRadius: "50%",
-                    border: "1px solid rgba(201,168,76,0.3)",
+                    border: "1px solid rgba(22,163,74,0.3)",
                     display: "flex",
                     alignItems: "center",
                     justifyContent: "center",
-                    color: "rgba(248,245,239,0.55)",
+                    color: "rgba(250,250,250,0.55)",
                     transition: "all 0.2s",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--gold)";
-                    e.currentTarget.style.color = "var(--navy)";
-                    e.currentTarget.style.borderColor = "var(--gold)";
+                    e.currentTarget.style.background = "var(--accent)";
+                    e.currentTarget.style.color = "var(--primary)";
+                    e.currentTarget.style.borderColor = "var(--accent)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "transparent";
-                    e.currentTarget.style.color = "rgba(248,245,239,0.55)";
-                    e.currentTarget.style.borderColor = "rgba(201,168,76,0.3)";
+                    e.currentTarget.style.color = "rgba(250,250,250,0.55)";
+                    e.currentTarget.style.borderColor = "rgba(22,163,74,0.3)";
                   }}
                 >
                   {s.icon}
@@ -226,7 +226,7 @@ export default function Home() {
             flexDirection: "column",
             alignItems: "center",
             gap: 6,
-            color: "rgba(248,245,239,0.25)",
+            color: "rgba(250,250,250,0.25)",
             fontSize: 9,
             letterSpacing: 2,
             textTransform: "uppercase",
@@ -238,7 +238,7 @@ export default function Home() {
               width: 1,
               height: 36,
               background:
-                "linear-gradient(to bottom, rgba(201,168,76,0.5), transparent)",
+                "linear-gradient(to bottom, rgba(22,163,74,0.5), transparent)",
             }}
           />
         </div> */}
@@ -253,13 +253,13 @@ export default function Home() {
             left: 0,
             right: 0,
             zIndex: 900,
-            background: "var(--gold)",
+            background: "var(--accent)",
             padding: "10px 24px",
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             gap: 12,
-            boxShadow: "0 4px 20px rgba(201,168,76,0.4)",
+            boxShadow: "0 4px 20px rgba(22,163,74,0.4)",
             flexWrap: "wrap",
           }}
         >
@@ -277,7 +277,7 @@ export default function Home() {
             <span
               style={{
                 fontWeight: 700,
-                color: "var(--navy)",
+                color: "var(--primary)",
                 fontSize: 13,
                 letterSpacing: 0.5,
               }}
@@ -293,7 +293,7 @@ export default function Home() {
               display: "flex",
               alignItems: "center",
               gap: 6,
-              background: "var(--navy)",
+              background: "var(--primary)",
               color: "var(--cream)",
               padding: "7px 16px",
               borderRadius: "var(--radius)",
@@ -311,7 +311,7 @@ export default function Home() {
       )}
 
       {/* ── Stats strip ──────────────────────────────────────────────── */}
-      <section
+      {/* <section
         style={{
           background: "var(--white)",
           borderBottom: "1px solid var(--border)",
@@ -335,7 +335,7 @@ export default function Home() {
                     fontFamily: "var(--font-display)",
                     fontSize: "clamp(1.8rem, 4vw, 2.5rem)",
                     fontWeight: 700,
-                    color: "var(--gold)",
+                    color: "var(--accent)",
                   }}
                 >
                   {s.num}
@@ -355,7 +355,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* ── About strip ──────────────────────────────────────────────── */}
       <section className="section" style={{ background: "var(--cream)" }}>
@@ -401,7 +401,7 @@ export default function Home() {
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <Link to="/about" className="btn btn-primary">
-                  Learn More <ArrowRight size={15} />
+                  Read More <ArrowRight size={15} />
                 </Link>
                 <a
                   href={SOCIALS.youtube?.url}
@@ -425,12 +425,12 @@ export default function Home() {
                   display: "block",
                 }}
               />
-              <div
+              {/* <div
                 style={{
                   position: "absolute",
                   bottom: -16,
                   left: -16,
-                  background: "var(--gold)",
+                  background: "var(--accent)",
                   padding: "18px 22px",
                   borderRadius: "var(--radius)",
                   boxShadow: "var(--shadow-md)",
@@ -441,31 +441,31 @@ export default function Home() {
                     fontFamily: "var(--font-display)",
                     fontSize: 28,
                     fontWeight: 700,
-                    color: "var(--navy)",
+                    color: "var(--primary)",
                     lineHeight: 1,
                   }}
                 >
-                  20+
+                  25
                 </div>
                 <div
                   style={{
                     fontSize: 10,
                     letterSpacing: 1.5,
                     textTransform: "uppercase",
-                    color: "var(--navy)",
+                    color: "var(--primary)",
                     marginTop: 4,
                   }}
                 >
                   Years of Ministry
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
       </section>
 
       {/* ── YouTube CTA ──────────────────────────────────────────────── */}
-      <section style={{ background: "var(--navy)", padding: "64px 0" }}>
+      <section style={{ background: "var(--primary)", padding: "64px 0" }}>
         <div className="container">
           <div
             style={{
@@ -501,7 +501,7 @@ export default function Home() {
                 >
                   Subscribe on YouTube
                 </h3>
-                <p style={{ color: "rgba(248,245,239,0.6)", fontSize: 14 }}>
+                <p style={{ color: "rgba(250,250,250,0.6)", fontSize: 14 }}>
                   Watch sermons, live services, and devotionals —{" "}
                   {SOCIALS.youtube?.handle}
                 </p>
@@ -541,7 +541,7 @@ export default function Home() {
       </section>
 
       {/* ── Latest Sermons ───────────────────────────────────────────── */}
-      <section className="section" style={{ background: "var(--navy)" }}>
+      <section className="section" style={{ background: "var(--primary)" }}>
         <div className="container">
           <div className="section-header">
             <div>
@@ -561,7 +561,7 @@ export default function Home() {
             <Link
               to="/sermons"
               style={{
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontSize: 12,
                 fontWeight: 700,
                 letterSpacing: 1,
@@ -581,7 +581,7 @@ export default function Home() {
                 .fill(0)
                 .map((_, i) => <SkeletonCard key={i} />)
             ) : sermons.length === 0 ? (
-              <p style={{ color: "rgba(248,245,239,0.4)", gridColumn: "1/-1" }}>
+              <p style={{ color: "rgba(250,250,250,0.4)", gridColumn: "1/-1" }}>
                 No sermons yet.
               </p>
             ) : (
@@ -595,7 +595,7 @@ export default function Home() {
                     className="card"
                     style={{
                       background: "rgba(255,255,255,0.05)",
-                      border: "1px solid rgba(201,168,76,0.12)",
+                      border: "1px solid rgba(22,163,74,0.12)",
                     }}
                   >
                     <img
@@ -628,7 +628,7 @@ export default function Home() {
                       <p
                         style={{
                           fontSize: 12,
-                          color: "rgba(248,245,239,0.45)",
+                          color: "rgba(250,250,250,0.45)",
                         }}
                       >
                         {s.preacher} • {format(new Date(s.date), "MMM d, yyyy")}
@@ -658,7 +658,7 @@ export default function Home() {
             <Link
               to="/blog"
               style={{
-                color: "var(--gold)",
+                color: "var(--accent)",
                 fontSize: 12,
                 fontWeight: 700,
                 letterSpacing: 1,
@@ -714,7 +714,7 @@ export default function Home() {
                         <p
                           style={{
                             fontSize: 12,
-                            color: "var(--gold)",
+                            color: "var(--accent)",
                             fontStyle: "italic",
                             marginBottom: 6,
                           }}
@@ -751,7 +751,7 @@ export default function Home() {
               <Link
                 to="/events"
                 style={{
-                  color: "var(--gold)",
+                  color: "var(--accent)",
                   fontSize: 12,
                   fontWeight: 700,
                   letterSpacing: 1,
@@ -791,7 +791,7 @@ export default function Home() {
                     >
                       <div
                         style={{
-                          background: "var(--gold)",
+                          background: "var(--accent)",
                           borderRadius: "var(--radius)",
                           padding: "8px 12px",
                           textAlign: "center",
@@ -802,7 +802,7 @@ export default function Home() {
                           style={{
                             fontSize: 20,
                             fontWeight: 700,
-                            color: "var(--navy)",
+                            color: "var(--primary)",
                             lineHeight: 1,
                             fontFamily: "var(--font-display)",
                           }}
@@ -814,7 +814,7 @@ export default function Home() {
                             fontSize: 9,
                             letterSpacing: 1,
                             textTransform: "uppercase",
-                            color: "var(--navy)",
+                            color: "var(--primary)",
                             marginTop: 2,
                           }}
                         >
@@ -851,7 +851,7 @@ export default function Home() {
       {/* ── Scripture banner ─────────────────────────────────────────── */}
       <section
         style={{
-          background: "var(--gold)",
+          background: "var(--accent)",
           padding: "56px 0",
           textAlign: "center",
         }}
@@ -862,7 +862,7 @@ export default function Home() {
               fontFamily: "var(--font-display)",
               fontSize: "clamp(1.2rem, 3vw, 1.8rem)",
               fontStyle: "italic",
-              color: "var(--navy)",
+              color: "var(--primary)",
               lineHeight: 1.7,
               marginBottom: 14,
             }}
@@ -874,7 +874,7 @@ export default function Home() {
           <p
             style={{
               fontWeight: 700,
-              color: "var(--navy)",
+              color: "var(--primary)",
               fontSize: 12,
               letterSpacing: 2,
               textTransform: "uppercase",
@@ -1071,7 +1071,7 @@ export default function Home() {
       {/* ── Newsletter ───────────────────────────────────────────────── */}
       <section
         className="section"
-        style={{ background: "var(--navy)", textAlign: "center" }}
+        style={{ background: "var(--primary)", textAlign: "center" }}
       >
         <div className="container" style={{ maxWidth: 540 }}>
           <div className="tag" style={{ marginBottom: 16 }}>
@@ -1089,7 +1089,7 @@ export default function Home() {
           <div className="gold-divider center" style={{ marginBottom: 16 }} />
           <p
             style={{
-              color: "rgba(248,245,239,0.55)",
+              color: "rgba(250,250,250,0.55)",
               marginBottom: 28,
               fontSize: 15,
             }}
@@ -1107,7 +1107,7 @@ export default function Home() {
                 flex: 1,
                 padding: "13px 16px",
                 background: "rgba(255,255,255,0.08)",
-                border: "1px solid rgba(201,168,76,0.3)",
+                border: "1px solid rgba(22,163,74,0.3)",
                 borderRadius: "var(--radius)",
                 color: "var(--cream)",
                 fontSize: 14,
