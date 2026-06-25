@@ -207,8 +207,8 @@ export default function Footer() {
           }}
         >
           <span>
-            © {new Date().getFullYear()} Pastor Daniel Akintola Ministries. All
-            rights reserved.
+            © {new Date().getFullYear()} Pastor Daniel Akintola. All rights
+            reserved.
           </span>
           <Link
             to="/admin/login"

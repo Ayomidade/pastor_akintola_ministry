@@ -133,7 +133,7 @@ CLOUDINARY_API_SECRET=your_api_secret
 CLIENT_URL=http://localhost:5173
 EMAIL_USER=yourgmail@gmail.com
 EMAIL_PASS=your_16_char_app_password
-EMAIL_FROM=Pastor Akintola Ministries <yourgmail@gmail.com>
+EMAIL_FROM=Pastor Akintola <yourgmail@gmail.com>
 ```
 
 ### Frontend (`client/.env`)

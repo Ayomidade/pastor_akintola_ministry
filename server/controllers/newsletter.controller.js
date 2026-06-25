@@ -1,5 +1,5 @@
 import { findSubscriberByEmail } from "../models/newsletter.model.js";
-import { transporter } from "../config/mailer.js";
+import { sendEmail} from "../config/mailer.js";
 import { ObjectId } from "mongodb";
 import dotenv from "dotenv";
 import { newsletter } from "../config/db.js";
@@ -65,17 +65,6 @@ export async function unsubscribe(req, res) {
 export async function sendBulkEmail(req, res) {
   const { subject, message, recipientIds } = req.body;
 
-  if(process.env.EMAIL_USER ===undefined){
-    return res.status(404).json({message:"User Email not found"})
-  }
-
-  if(process.env.EMAIL_PASS ===undefined){
-    return res.status(404).json({message:"User Password not found"})
-  }
-
-  if(process.env.EMAIL_FROM ===undefined){
-    return res.status(404).json({message:"User From not found"})
-  }
   if (!subject || !message) {
     return res
       .status(400)
@@ -117,8 +106,8 @@ export async function sendBulkEmail(req, res) {
       await Promise.allSettled(
         batch.map(async (recipient) => {
           try {
-            await transporter.sendMail({
-              from: process.env.EMAIL_FROM,
+            await sendEmail({
+              // from: process.env.EMAIL_FROM,
               to: recipient.email,
               subject,
               text: message, // plain text fallback

@@ -1,7 +1,7 @@
 {
   "name": "pastor-akintola-api",
   "version": "1.0.0",
-  "description": "Backend API for Pastor Daniel Akintola Ministries",
+  "description": "Backend API for Pastor Daniel Akintola",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -21,7 +21,7 @@
     "mongodb": "^7.1.1",
     "multer": "^2.1.1",
     "multer-storage-cloudinary": "^4.0.0",
-    "nodemailer": "^8.0.5",
+    "resend": "^6.14.0",
     "sanitize-html": "^2.17.3",
     "socket.io": "^4.8.3"
   },

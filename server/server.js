@@ -23,7 +23,7 @@ dotenv.config();
 
 const app = express();
 
-app.set("trust proxy", 1)
+app.set("trust proxy", 1);
 
 // Rate limiter
 const limiter = rateLimit({
@@ -65,7 +65,7 @@ app.use(
 // router=express.Router()
 // router.get("/setup-status", checkSetupStatus);
 
-app.use("/api/auth/setup-status", setupRouter)
+app.use("/api/auth/setup-status", setupRouter);
 
 // Routes
 app.use("/api/auth", authRoutes);
@@ -84,7 +84,7 @@ app.use("/api/chat", chatRoutes);
 
 app.get("/", (req, res) => {
   return res.json({
-    message: "Pastor Daniel Akintola Ministries API is running.",
+    message: "Pastor Daniel Akintola API is running.",
   });
 });
 
