@@ -1,4 +1,3 @@
-// src/services/auth.service.js
 import api from "../api/axios.js";
 export const authService = {
   checkSetup: () => api.get("/auth/setup-status"),
