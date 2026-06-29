@@ -1,9 +1,9 @@
-// src/pages/public/Ebooks.jsx
 import { useState, useEffect } from "react";
 import { ebookService } from "../../services/ebook.service.js";
 import { SkeletonCard } from "../../components/shared/Skeleton.jsx";
 import { BookOpen, Download } from "lucide-react";
 import toast from "react-hot-toast";
+import { deriveFilename, downloadFile } from "../../utils/download.js";
 
 export default function Ebooks() {
   const [ebooks, setEbooks] = useState([]);
