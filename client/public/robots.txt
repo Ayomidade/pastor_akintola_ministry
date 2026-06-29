@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+Disallow: /admin/
+Disallow: /visitor/login
+Disallow: /visitor/register
+Disallow: /api/
+
+Sitemap: https://www.pastordanielakintola.com/sitemap.xml
+Host: https://www.pastordanielakintola.com

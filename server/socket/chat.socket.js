@@ -11,7 +11,7 @@ export function initChatSocket(io) {
     // Visitor or admin joins a session room
     socket.on("join_session", async ({ sessionId, role }) => {
       socket.join(sessionId);
-      console.log(`${role} joined session: ${sessionId}`);
+      // console.log(`${role} joined session: ${sessionId}`);
 
       // Mark session as active and read by admin if admin joined
       if (role === "admin") {
