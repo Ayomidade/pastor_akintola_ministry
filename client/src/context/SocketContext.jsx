@@ -10,7 +10,7 @@ export function SocketProvider({ children }) {
 
   useEffect(() => {
     const socket = io(
-      `${import.meta.env.VITE_SOCKET_URL || "http://localhost:5000"}/chat`,
+      "https://api.pastordanielakintola.com/chat",
       {
         autoConnect: true,
         reconnection: true,

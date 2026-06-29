@@ -13,7 +13,7 @@ const httpServer = createServer(app);
 
 const io = new Server(httpServer, {
   cors: {
-    origin: process.env.CLIENT_URL,
+    origin: "https://www.pastordanielakintola.com/",
     methods: ["GET", "POST"],
     credentials: true,
   },

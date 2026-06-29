@@ -35,7 +35,7 @@ const limiter = rateLimit({
 
 app.use(
   cors({
-    origin: process.env.CLIENT_URL,
+    origin: "https://www.pastordanielakintola.com/",
     credentials: true,
   }),
 );

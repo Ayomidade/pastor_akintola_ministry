@@ -1,5 +1,5 @@
 import { findSubscriberByEmail } from "../models/newsletter.model.js";
-import { sendEmail} from "../config/mailer.js";
+import { sendEmail } from "../config/mailer.js";
 import { ObjectId } from "mongodb";
 import dotenv from "dotenv";
 import { newsletter } from "../config/db.js";
@@ -208,7 +208,7 @@ function buildEmailTemplate({ subject, message }) {
               <!-- CTA -->
               <tr>
                 <td style="padding:0 40px 40px;">
-                  <a href="${process.env.CLIENT_URL}"
+                  <a href="https://www.pastordanielakintola.com/" target="_blank
                     style="display:inline-block;background:#16A34A;color:#ffffff;
                     padding:12px 28px;border-radius:4px;font-size:12px;
                     font-weight:700;letter-spacing:1px;text-transform:uppercase;
